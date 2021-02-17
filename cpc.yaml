@@ -1,0 +1,218 @@
+backend: tensorflow
+class_name: Sequential
+config:
+  layers:
+  - class_name: InputLayer
+    config:
+      batch_input_shape: !!python/tuple
+      - null
+      - 24
+      - 1
+      dtype: float32
+      name: input_34
+      ragged: false
+      sparse: false
+  - class_name: Conv1D
+    config:
+      activation: relu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 16
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 7
+      name: conv1d_63
+      padding: same
+      strides: !!python/tuple
+      - 2
+      trainable: true
+      use_bias: true
+  - class_name: BatchNormalization
+    config:
+      axis: !!python/object/apply:tensorflow.python.training.tracking.data_structures.ListWrapper
+      - - 2
+      beta_constraint: null
+      beta_initializer:
+        class_name: Zeros
+        config: {}
+      beta_regularizer: null
+      center: true
+      dtype: float32
+      epsilon: 0.001
+      gamma_constraint: null
+      gamma_initializer:
+        class_name: Ones
+        config: {}
+      gamma_regularizer: null
+      momentum: 0.99
+      moving_mean_initializer:
+        class_name: Zeros
+        config: {}
+      moving_variance_initializer:
+        class_name: Ones
+        config: {}
+      name: batch_normalization_24
+      scale: true
+      trainable: true
+  - class_name: Conv1D
+    config:
+      activation: relu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 8
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 7
+      name: conv1d_64
+      padding: same
+      strides: !!python/tuple
+      - 2
+      trainable: true
+      use_bias: true
+  - class_name: Conv1DTranspose
+    config:
+      activation: relu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 8
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 7
+      name: conv1d_transpose_95
+      output_padding: null
+      padding: same
+      strides: !!python/tuple
+      - 2
+      trainable: true
+      use_bias: true
+  - class_name: BatchNormalization
+    config:
+      axis: !!python/object/apply:tensorflow.python.training.tracking.data_structures.ListWrapper
+      - - 2
+      beta_constraint: null
+      beta_initializer:
+        class_name: Zeros
+        config: {}
+      beta_regularizer: null
+      center: true
+      dtype: float32
+      epsilon: 0.001
+      gamma_constraint: null
+      gamma_initializer:
+        class_name: Ones
+        config: {}
+      gamma_regularizer: null
+      momentum: 0.99
+      moving_mean_initializer:
+        class_name: Zeros
+        config: {}
+      moving_variance_initializer:
+        class_name: Ones
+        config: {}
+      name: batch_normalization_25
+      scale: true
+      trainable: true
+  - class_name: Conv1DTranspose
+    config:
+      activation: relu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 16
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 7
+      name: conv1d_transpose_96
+      output_padding: null
+      padding: same
+      strides: !!python/tuple
+      - 2
+      trainable: true
+      use_bias: true
+  - class_name: Conv1DTranspose
+    config:
+      activation: linear
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: !!python/tuple
+      - 1
+      dtype: float32
+      filters: 1
+      groups: 1
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config:
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 7
+      name: conv1d_transpose_97
+      output_padding: null
+      padding: same
+      strides: !!python/tuple
+      - 1
+      trainable: true
+      use_bias: true
+  name: sequential_32
+keras_version: 2.4.0
