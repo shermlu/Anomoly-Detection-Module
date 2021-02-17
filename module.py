@@ -49,7 +49,7 @@ def read_model(path, x_train):
     """
     with open(path, 'r') as file:
         yaml_model=file.read()
-    # Load the saved Yaml model
+
     model= keras.models.model_from_yaml(yaml_model)
     model.summary()
     model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.01), loss="mse")
@@ -64,7 +64,6 @@ def read_model(path, x_train):
     return model
 
 
-# Generated training sequences for use in the model.
 def create_sequences(data_list):
     output = []
     for data in data_list:
@@ -113,7 +112,6 @@ def get_preds(model, data, counter):
     mse = mse.reshape((-1))
     anomalies = mse > get_threshold(mse)
 
-    #fulldf = data
     fulldf = anom_preds(data, anomalies)
     print('Confusion matrix: {}'.format(counter))
     print(confusion_matrix(fulldf['anomaly'], fulldf['anom_pred']))
