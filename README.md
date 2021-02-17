@@ -6,22 +6,32 @@ In this model, the encoder and decoder parts only have two layers with a batch n
 
 cpc results: 
 Confusion matrix 2
-[[1617    6]
- [   1    0]]
+| 1617 | 6 |
+|------|---|
+| 1    | 0 |
+
 Confusion matrix 3
-[[1530    5]
- [   3    0]]
+| 1530 | 5 |
+|------|---|
+| 3    | 0 |
+
 Confusion matrix 4
-[[1636    4]
- [   1    2]]
+| 1636 | 4 |
+|------|---|
+| 1    | 2 |
  
 cpm results: 
 Confusion matrix 2
-[[1613    9]
- [   2    0]]
+| 1613 | 9 |
+|------|---|
+| 2    | 0 |
+
 Confusion matrix 3
-[[1533    4]
- [   1    0]]
+| 1533 | 4 |
+|------|---|
+| 1    | 0 |
+
 Confusion matrix 4
-[[1635    4]
- [   4    0]]
+| 1635 | 4 |
+|------|---|
+| 4    | 0 |
